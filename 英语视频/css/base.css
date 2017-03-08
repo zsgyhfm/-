@@ -1,0 +1,156 @@
+/**********************\
+    reset
+\**********************/
+[class^='col-xs'] {
+    padding-left: 0;
+    padding-right: 0;
+}
+body{
+    background-color: RGB(243, 245, 247);
+}
+
+/**********************\
+    媒体查询
+\**********************/
+@media (max-width: 768px) {
+    /*设置轮播器索引点的位置*/
+    /*.carousel-indicators {*/
+        /*bottom: 25px;*/
+    /*}*/
+
+    /*字体*/
+    .light {
+        font-weight: lighter;
+    }
+    .collect-item {
+        height: 100px;
+        background-size: 100% 100px;
+
+    }
+    .show-item{
+        display: block;
+    }
+    #slider .carousel-inner > .item {
+        /*img不会超过容器大小*/
+        max-width: 100%;
+        width: 2000px;
+        height: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 200px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    /*.carousel-indicators {*/
+        /*bottom: 10px;*/
+    /*}*/
+
+    .light {
+        font-weight: lighter;
+    }
+    .collect-item {
+        height: 150px;
+        background-size: 100% 150px;
+
+    }
+    .show-item{
+        display: none;
+    }
+    #slider .carousel-inner > .item {
+        /*img不会超过容器大小*/
+        max-width: 100%;
+        width: 2000px;
+        height: 400px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 400px;
+    }
+}
+
+/**********************\
+    导航条
+\**********************/
+.nav {
+    background-color: rgba(22, 255, 46, 0.5);
+    height: 40px;
+    padding-top: 8px;
+    color: rgba(0, 0, 0, 0.5);;
+}
+
+/**********************\
+    轮播器
+\**********************/
+/*#slider .carousel-inner > .item {*/
+    /*!*img不会超过容器大小*!*/
+    /*max-width: 100%;*/
+    /*width: 2000px;*/
+    /*height: 200px;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100% 200px;*/
+/*}*/
+
+/**********************\
+    锚点导航区
+\**********************/
+#navbtn{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+#navbtn .media:first-child {
+    margin-top: 15px;
+}
+#navbtn .navbtn-item{
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+}
+
+
+
+/**********************\
+    collectionView
+\**********************/
+#content {
+
+
+}
+
+.collect-item {
+    width: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+.collect-item:nth-of-type(n+2){
+    margin-top: 10px;
+}
+
+#content .media {
+    padding-left: 10px;
+
+}
+#content .media:nth-of-type(2n){
+    padding-left: 0;
+}
+#content .anchor{
+background-color: RGB(230, 230, 230);
+    height: 30px;
+    cursor: pointer;
+
+}
+
+#content >div>p{
+    padding-top: 5px;
+}
+#content >div>a{
+    padding-top: 5px;
+}
+.section{
+    padding-bottom: 10px;
+}
