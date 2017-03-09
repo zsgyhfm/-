@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>index</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.css" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="node_modules/video.js/dist/video-js.min.css">
 </head>
 <body>
 <!--导航-->
@@ -15,7 +16,7 @@
         <div class="row ">
             <!--导航条-->
             <div class="col-xs-12 col-md-12 text-center nav  ">
-                首页
+                自学英语
             </div>
 
             <!--轮播器-->
@@ -106,18 +107,18 @@
 
             <!--内容区-->
             <section id="content" class="col-xs-12 col-md-12 color light">
-                <div id="yinbiao"class="col-xs-12 section">
+                <div id="yinbiao" class="col-xs-12 section">
                     <p class="anchor col-xs-10">音标</p>
                     <a class="anchor col-xs-2 text-right more">>></a>
-                    <collect cover="0"></collect>
-                    <collect cover="0"></collect>
+                    <collect cover="0" ></collect>
+                    <collect cover="0" ></collect>
                     <div class="col-xs-12 visible-xs-block"></div>
-                    <collect cover="0"></collect>
-                    <collect cover="0"></collect>
+                    <collect cover="0" ></collect>
+                    <collect cover="0" ></collect>
                     <div class="col-xs-12 visible-xs-block"></div>
                 </div>
 
-                <div id="danci"class="col-xs-12 section">
+                <div id="danci" class="col-xs-12 section">
                     <p class="anchor col-xs-10">单词</p>
                     <a class="anchor col-xs-2 text-right more">>></a>
                     <collect cover="1"></collect>
@@ -129,7 +130,7 @@
 
                 </div>
 
-                <div id="yufa"class="col-xs-12 section">
+                <div id="yufa" class="col-xs-12 section">
                     <p class="anchor col-xs-10">语法</p>
                     <a class="anchor col-xs-2 text-right more">>></a>
                     <collect cover="2"></collect>
@@ -141,7 +142,7 @@
 
                 </div>
 
-                <div id="kouyu"class="col-xs-12 section">
+                <div id="kouyu" class="col-xs-12 section">
                     <p class="anchor col-xs-10">口语</p>
                     <a class="anchor col-xs-2 text-right more">>></a>
                     <collect cover="3"></collect>
@@ -151,19 +152,29 @@
                     <collect cover="3"></collect>
                     <div class="col-xs-12 visible-xs-block"></div>
 
-
-
+                </div>
             </section>
-        </div>
+            <!--视频播放器-->
+            <section id="videoplay"  v-show='videoshow' v-on:click="changestatus">
+            </section>
+            <videoList mp4='http://vjs.zencdn.net/v/oceans.mp4' v-show='videoshow' v-on:click="pause">
+            </videoList>
 
+        </div>
     </div>
+
 </header>
-<!--轮播器-->
+
+
+
 
 </body>
-<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
-<script src="//cdn.bootcss.com/vue/2.2.1/vue.min.js"></script>
+<script src="node_modules/jquery/jquery.min.js"></script>
+
+<script src="node_modules/vue/dist/vue.min.js"></script>
+<script src="node_modules/video.js/dist/video.min.js"></script>
 <script src="js/getAllCategories.js"></script>
 <script src="js/index.js"></script>
+
+
 </html>
